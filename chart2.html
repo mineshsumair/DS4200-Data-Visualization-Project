@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-ef38901c15fe505dbc85876186d63b71"}, "mark": {"type": "bar", "color": "#1ED760"}, "encoding": {"tooltip": [{"field": "Artist", "title": "Artist", "type": "nominal"}, {"field": "Spotify Streams (B)", "format": ".2f", "title": "Streams (B)", "type": "quantitative"}], "x": {"field": "Spotify Streams (B)", "title": "Total Spotify Streams (Billions)", "type": "quantitative"}, "y": {"field": "Artist", "sort": "-x", "title": "Artist", "type": "nominal"}}, "height": 500, "title": "Top 25 Artists by Total Spotify Streams (2024)", "width": 650, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-ef38901c15fe505dbc85876186d63b71": [{"Artist": "Bad Bunny", "Spotify Streams": 37054834425.0, "Spotify Streams (B)": 37.054834425}, {"Artist": "The Weeknd", "Spotify Streams": 36948540278.0, "Spotify Streams (B)": 36.948540278}, {"Artist": "Drake", "Spotify Streams": 34962157577.0, "Spotify Streams (B)": 34.962157577}, {"Artist": "Taylor Swift", "Spotify Streams": 34470771165.0, "Spotify Streams (B)": 34.470771165}, {"Artist": "Post Malone", "Spotify Streams": 26137472958.0, "Spotify Streams (B)": 26.137472958}, {"Artist": "Ed Sheeran", "Spotify Streams": 24014900390.0, "Spotify Streams (B)": 24.01490039}, {"Artist": "Olivia Rodrigo", "Spotify Streams": 19729219749.0, "Spotify Streams (B)": 19.729219749}, {"Artist": "Ariana Grande", "Spotify Streams": 19186816862.0, "Spotify Streams (B)": 19.186816862}, {"Artist": "Eminem", "Spotify Streams": 18878880174.0, "Spotify Streams (B)": 18.878880174}, {"Artist": "Harry Styles", "Spotify Streams": 17353388340.0, "Spotify Streams (B)": 17.35338834}, {"Artist": "Imagine Dragons", "Spotify Streams": 17157121647.0, "Spotify Streams (B)": 17.157121647}, {"Artist": "XXXTENTACION", "Spotify Streams": 16923515048.0, "Spotify Streams (B)": 16.923515048}, {"Artist": "Justin Bieber", "Spotify Streams": 16647801287.0, "Spotify Streams (B)": 16.647801287}, {"Artist": "Travis Scott", "Spotify Streams": 16460200849.0, "Spotify Streams (B)": 16.460200849}, {"Artist": "MUSIC LAB JPN", "Spotify Streams": 16246941203.0, "Spotify Streams (B)": 16.246941203}, {"Artist": "Bruno Mars", "Spotify Streams": 16225111478.0, "Spotify Streams (B)": 16.225111478}, {"Artist": "Maroon 5", "Spotify Streams": 16000309235.0, "Spotify Streams (B)": 16.000309235}, {"Artist": "Billie Eilish", "Spotify Streams": 15920112956.0, "Spotify Streams (B)": 15.920112956}, {"Artist": "Doja Cat", "Spotify Streams": 15856288522.0, "Spotify Streams (B)": 15.856288522}, {"Artist": "Dua Lipa", "Spotify Streams": 15649310557.0, "Spotify Streams (B)": 15.649310557}, {"Artist": "Calvin Harris", "Spotify Streams": 15536690468.0, "Spotify Streams (B)": 15.536690468}, {"Artist": "Rihanna", "Spotify Streams": 14523392765.0, "Spotify Streams (B)": 14.523392765}, {"Artist": "Juice WRLD", "Spotify Streams": 14230348723.0, "Spotify Streams (B)": 14.230348723}, {"Artist": "Shawn Mendes", "Spotify Streams": 13482702097.0, "Spotify Streams (B)": 13.482702097}, {"Artist": "Miley Cyrus", "Spotify Streams": 13248096043.0, "Spotify Streams (B)": 13.248096043}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

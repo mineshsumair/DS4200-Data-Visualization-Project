@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@6"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@6.1.0"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@7"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300, "strokeWidth": 0}, "axis": {"grid": false}}, "layer": [{"mark": {"type": "rect", "cornerRadius": 4, "stroke": "white", "strokeWidth": 2}, "encoding": {"color": {"field": "Correlation", "legend": {"labelFontSize": 11, "title": "Correlation", "titleFontSize": 12}, "scale": {"domain": [-1, 1], "scheme": "redpurple"}, "type": "quantitative"}, "tooltip": [{"field": "Variable 1", "title": "Variable 1", "type": "nominal"}, {"field": "Variable 2", "title": "Variable 2", "type": "nominal"}, {"field": "Correlation", "format": ".2f", "title": "Correlation", "type": "quantitative"}], "x": {"axis": {"labelAngle": -30, "labelFontSize": 11, "labelFontWeight": "bold"}, "field": "Variable 1", "sort": ["Spotify Streams", "Spotify Playlist Count", "TikTok Views", "TikTok Likes", "YouTube Views", "YouTube Likes", "Shazam Counts"], "title": null, "type": "nominal"}, "y": {"axis": {"labelFontSize": 11, "labelFontWeight": "bold"}, "field": "Variable 2", "sort": ["Spotify Streams", "Spotify Playlist Count", "TikTok Views", "TikTok Likes", "YouTube Views", "YouTube Likes", "Shazam Counts"], "title": null, "type": "nominal"}}, "title": {"text": "Cross-Platform Spearman Rank Correlation Matrix", "anchor": "start", "fontSize": 16, "subtitle": "Rank correlation between streaming metrics across Spotify, TikTok, YouTube, and Shazam", "subtitleFontSize": 12}}, {"mark": {"type": "text", "fontSize": 13, "fontWeight": "bold"}, "encoding": {"color": {"condition": {"test": "abs(datum.Correlation) > 0.7", "value": "white"}, "value": "black"}, "text": {"field": "Correlation", "format": ".2f", "type": "quantitative"}, "x": {"field": "Variable 1", "sort": ["Spotify Streams", "Spotify Playlist Count", "TikTok Views", "TikTok Likes", "YouTube Views", "YouTube Likes", "Shazam Counts"], "type": "nominal"}, "y": {"field": "Variable 2", "sort": ["Spotify Streams", "Spotify Playlist Count", "TikTok Views", "TikTok Likes", "YouTube Views", "YouTube Likes", "Shazam Counts"], "type": "nominal"}}}], "data": {"name": "data-1e0bc93dfade16397924c00a66463c24"}, "height": 550, "width": 550, "$schema": "https://vega.github.io/schema/vega-lite/v6.1.0.json", "datasets": {"data-1e0bc93dfade16397924c00a66463c24": [{"Variable 1": "Spotify Streams", "Variable 2": "Spotify Streams", "Correlation": 1.0}, {"Variable 1": "Spotify Playlist Count", "Variable 2": "Spotify Streams", "Correlation": 0.89}, {"Variable 1": "TikTok Views", "Variable 2": "Spotify Streams", "Correlation": 0.33}, {"Variable 1": "TikTok Likes", "Variable 2": "Spotify Streams", "Correlation": 0.38}, {"Variable 1": "YouTube Views", "Variable 2": "Spotify Streams", "Correlation": 0.62}, {"Variable 1": "YouTube Likes", "Variable 2": "Spotify Streams", "Correlation": 0.65}, {"Variable 1": "Shazam Counts", "Variable 2": "Spotify Streams", "Correlation": 0.77}, {"Variable 1": "Spotify Streams", "Variable 2": "Spotify Playlist Count", "Correlation": 0.89}, {"Variable 1": "Spotify Playlist Count", "Variable 2": "Spotify Playlist Count", "Correlation": 1.0}, {"Variable 1": "TikTok Views", "Variable 2": "Spotify Playlist Count", "Correlation": 0.33}, {"Variable 1": "TikTok Likes", "Variable 2": "Spotify Playlist Count", "Correlation": 0.38}, {"Variable 1": "YouTube Views", "Variable 2": "Spotify Playlist Count", "Correlation": 0.47}, {"Variable 1": "YouTube Likes", "Variable 2": "Spotify Playlist Count", "Correlation": 0.53}, {"Variable 1": "Shazam Counts", "Variable 2": "Spotify Playlist Count", "Correlation": 0.79}, {"Variable 1": "Spotify Streams", "Variable 2": "TikTok Views", "Correlation": 0.33}, {"Variable 1": "Spotify Playlist Count", "Variable 2": "TikTok Views", "Correlation": 0.33}, {"Variable 1": "TikTok Views", "Variable 2": "TikTok Views", "Correlation": 1.0}, {"Variable 1": "TikTok Likes", "Variable 2": "TikTok Views", "Correlation": 0.98}, {"Variable 1": "YouTube Views", "Variable 2": "TikTok Views", "Correlation": 0.21}, {"Variable 1": "YouTube Likes", "Variable 2": "TikTok Views", "Correlation": 0.3}, {"Variable 1": "Shazam Counts", "Variable 2": "TikTok Views", "Correlation": 0.36}, {"Variable 1": "Spotify Streams", "Variable 2": "TikTok Likes", "Correlation": 0.38}, {"Variable 1": "Spotify Playlist Count", "Variable 2": "TikTok Likes", "Correlation": 0.38}, {"Variable 1": "TikTok Views", "Variable 2": "TikTok Likes", "Correlation": 0.98}, {"Variable 1": "TikTok Likes", "Variable 2": "TikTok Likes", "Correlation": 1.0}, {"Variable 1": "YouTube Views", "Variable 2": "TikTok Likes", "Correlation": 0.23}, {"Variable 1": "YouTube Likes", "Variable 2": "TikTok Likes", "Correlation": 0.33}, {"Variable 1": "Shazam Counts", "Variable 2": "TikTok Likes", "Correlation": 0.39}, {"Variable 1": "Spotify Streams", "Variable 2": "YouTube Views", "Correlation": 0.62}, {"Variable 1": "Spotify Playlist Count", "Variable 2": "YouTube Views", "Correlation": 0.47}, {"Variable 1": "TikTok Views", "Variable 2": "YouTube Views", "Correlation": 0.21}, {"Variable 1": "TikTok Likes", "Variable 2": "YouTube Views", "Correlation": 0.23}, {"Variable 1": "YouTube Views", "Variable 2": "YouTube Views", "Correlation": 1.0}, {"Variable 1": "YouTube Likes", "Variable 2": "YouTube Views", "Correlation": 0.93}, {"Variable 1": "Shazam Counts", "Variable 2": "YouTube Views", "Correlation": 0.5}, {"Variable 1": "Spotify Streams", "Variable 2": "YouTube Likes", "Correlation": 0.65}, {"Variable 1": "Spotify Playlist Count", "Variable 2": "YouTube Likes", "Correlation": 0.53}, {"Variable 1": "TikTok Views", "Variable 2": "YouTube Likes", "Correlation": 0.3}, {"Variable 1": "TikTok Likes", "Variable 2": "YouTube Likes", "Correlation": 0.33}, {"Variable 1": "YouTube Views", "Variable 2": "YouTube Likes", "Correlation": 0.93}, {"Variable 1": "YouTube Likes", "Variable 2": "YouTube Likes", "Correlation": 1.0}, {"Variable 1": "Shazam Counts", "Variable 2": "YouTube Likes", "Correlation": 0.53}, {"Variable 1": "Spotify Streams", "Variable 2": "Shazam Counts", "Correlation": 0.77}, {"Variable 1": "Spotify Playlist Count", "Variable 2": "Shazam Counts", "Correlation": 0.79}, {"Variable 1": "TikTok Views", "Variable 2": "Shazam Counts", "Correlation": 0.36}, {"Variable 1": "TikTok Likes", "Variable 2": "Shazam Counts", "Correlation": 0.39}, {"Variable 1": "YouTube Views", "Variable 2": "Shazam Counts", "Correlation": 0.5}, {"Variable 1": "YouTube Likes", "Variable 2": "Shazam Counts", "Correlation": 0.53}, {"Variable 1": "Shazam Counts", "Variable 2": "Shazam Counts", "Correlation": 1.0}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
