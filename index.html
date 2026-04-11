@@ -87,15 +87,6 @@
         songs then they might rank higher despite having less incredibly popular songs.
       </p>
 
-      <p>
-        A horizontal bar chart was chosen because it is the best way to compare a single quantitative variable across
-        categorical items. The horizontal orientation was used to make the names of the artists also horizontal and
-        easier to read. The bars are sorted in descending order from top to bottom allowing viewers to observe
-        differences between each of the bars. Tooltips were added so viewers can hover over a bar and see the exact
-        number of streams for each artist. A single color was used for all of the bars because there are no categories
-        to distinguish.
-      </p>
-
       <div id="vis"></div>
       <script>
         (function (vegaEmbed) {
@@ -132,17 +123,6 @@
         of listeners to further drive their streams. To view how individual artists are doing these things, viewers can
         also isolate any of the top 50 artists (by total streams) using the dropdown menu. This allows viewers to
         examine how a specific artist's catalog for the year is distributed across these metrics.
-      </p>
-
-      <p>
-        This scatterplot was designed to clearly communicate the relationship between playlisting and stream count on
-        Spotify. A scatterplot was the most appropriate chart type for this data, given that we are examining the
-        correlation between two continuous qualitative variables. Using a scatterplot makes it easier for viewers to
-        observe the general distribution of the encoded points across the two axes. The measurements on these two axes
-        were scaled to allow for easier readability. Three interactive features were added to this graph, with users
-        having the ability to limit the number of songs shown by their streams, artists, and the option to click and
-        single out a specific point. These decisions all allow for a balance between overview and detail in the
-        visualization, making it useful as a tool for investigating individual artists and observations.
       </p>
 
       <div id="vis2"></div>
@@ -192,20 +172,6 @@
     with what they are listening to.
   </p>
 
-  <p>
-    This multifacted scatterplot was designed to allow viewers to compare how the top 500 songs on Spotify perform on
-    other platforms at the same time. A scatterplot was used for each of the panels because we are examining the
-    relationship between two quantitative variables. This makes it easier to observe the strength and direction of the
-    correlation. A linear regression line was added to each panel to highlight the trend of each plot. This helps
-    viewers understand which platforms have stronger relationships with Spotify streams. The data was filtered to the
-    top 500 streamed songs on Spotify to focus the analysis on the most popular songs. The axes were scaled and adjusted
-    to start at the minimum data values instead of 0 to maximize spaced used. The main interactive feature is a linked
-    brush selection. When a viewer clicks and drags their mouse on the top left panel, it highlights the selected data
-    on the other panels. The unselected data points turn grey to show they aren't selected. This cross filtering allows
-    viewers to whether songs that cluster on one platform also cluster on the others.
-  </p>
-
-
   <div id="vis"></div>
   <div id="vis3"></div>
   <script>
@@ -252,17 +218,6 @@
     data first then computes the correlation which prevents outliers from greatly distorting the results.
   </p>
 
-  <p>
-    A heatmap was chosen to visualize the correlation matrix because it allows viewers to quickly compare the
-    relationships between all pairs of the platforms at the same time. The blue orange color scale maps the correlations
-    -1 to 1. This makes it intuitive to determine strong positive correlations (dark orange), weak correlations (near
-    white), and negative correlations (blue). The correlation values are displayed as text on each box so the viewer can
-    quickly compare exact numbers to see smaller differences. The text switches color from black to white when the color
-    is dark to maintain easy readability. Tooltips were added so viewers can hover on any cell to see exact correlation
-    numbers with the variable pairings. The seven metrics were chosen to show the engagement across four platforms:
-    Spotify, TikTok, YouTube, and Shazam.
-  </p>
-
   <body>
     <div id="vis4"></div>
     <script>
@@ -300,19 +255,6 @@
     streaming, however, it may be a stretch to say that this extends to music consumption. Though, in terms of reach, it
     can be said that short-form content is one of the most notable ways music reaches new listeners, which highlights
     TikTok's emerging role in modern music consumption.
-  </p>
-
-  <p>
-    Pie charts, like this one, are designed to communicate relative proportions at a glance, using proportional data to
-    encode each platform's share of total play volume. We selected the pie chart to represent this data as the primary
-    analytical task we wanted to accomplish was looking at the part-to-whole comparisons. Viewers are meant to
-    understand how each platform contributes to the bigger picture. Each slice is assigned a color that is associated
-    with its respective platform's real-world branding (e.g., green for Spotify or black for TikTok). This allows
-    viewers to identify platforms with ease without needing to cross-reference the legend as often. Percentage labels
-    were placed directly within each slice to make key values immediately readable, and to leave less up to viewer
-    interpretation. The chart is kept intentionally minimal, with no gridlines or axes creating chart clutter, since the
-    relevant information is fully captured by slize size and the embedded labels, rather than precise positional
-    encoding.
   </p>
 
   <iframe src="d3/index.html" width="960" height="500" frameborder="0"></iframe>
